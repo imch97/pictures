@@ -26,5 +26,9 @@ const comments = [
 const ModalWindow = (props) => {
   const { image } = props;
 
-  return <></>;
+  return (
+    <>
+      <div className="modal_window"></div>
+    </>
+  );
 };
