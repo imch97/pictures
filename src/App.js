@@ -3,7 +3,9 @@ import "./App.css";
 const givePicture = () => {
   let pic = [];
   for (let count = 1; count <= 30; count++) {
-    pic.push(<img src={`/images/space3_${count}.jpg`} alt="" />);
+    pic.push(
+      <img src={`/images/space3_${count}.jpg`} key={`img_${count}`} alt="" />
+    );
   }
   return pic;
 };
@@ -18,7 +20,7 @@ function App() {
         <div className="list_pictures">
           {givePicture().map((el, index) => {
             return (
-              <div className="list_pictures_item" key={index}>
+              <div className="list_pictures_item" key={`item_${index}`}>
                 {" "}
                 {el}{" "}
               </div>
