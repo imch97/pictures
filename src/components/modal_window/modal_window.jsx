@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Comment from '../comment/comment.jsx'
 import classNames from 'classnames'
-
+import './modal_window.css'
 const comments = [
 	{
 		id: 'com1',
@@ -30,27 +30,21 @@ const comments = [
 ]
 
 const ModalWindow = (props) => {
-	const { image } = props
+	const { image, onClose } = props
 
-	const [visible, setVisible] = useState(false)
 	const [tittle, setTittle] = useState('')
 	const [text, setText] = useState('')
 	const [comm, setComm] = useState(comments)
 
-	function closeModal() {}
-	function openModal(image, comments) {
-		setVisible(true)
-	}
-
 	return (
 		<>
 			<div
-				className={classNames({ backdrop, active: visible })}
-				style={visible ? { display: 'block' } : {}}
+				className={classNames({ backdrop: true, active: props.image })}
+				style={props.image ? { display: 'block' } : {}}
 			>
 				<div className="modal_window">
 					<div className="modal_window_picture">
-						<img src="" alt="" />
+						<img src="/images/space3_1.jpg" alt="" />
 					</div>
 					<div className="modal_window_comments">
 						<div className="window_comments">

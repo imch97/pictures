@@ -1,5 +1,6 @@
 import './App.css'
-import ModalWIndow from './components/modal_window/modal_window.jsx'
+import React, { useState } from 'react'
+import ModalWindow from './components/modal_window/modal_window.jsx'
 import Picture from './components/pictures/picture.jsx'
 
 const givePicture = () => {
@@ -11,9 +12,11 @@ const givePicture = () => {
 }
 
 function App() {
-	function openPicture() {
-		ModalWIndow.open()
-	}
+	// const [modal, setModal] = useState()
+	const [activeImage, setActiveImage] = useState(null)
+	const onImageClick = (image) => setActiveImage(image)
+	const onCloseModal = () => setActiveImage(null)
+
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -22,10 +25,11 @@ function App() {
 			<div className="container">
 				<div className="list_pictures">
 					{givePicture().map((el, index) => (
-						<Picture path={el} />
+						<Picture path={el} key={index} onClick={onImageClick} />
 					))}
 				</div>
 			</div>
+			<ModalWindow image={activeImage} onClose={onCloseModal} />
 		</div>
 	)
 }
