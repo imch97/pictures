@@ -9,8 +9,9 @@ const BackDrop = (props) => {
 			className={classNames({ backdrop: true, active: props.image })}
 			style={props.image ? { display: 'block' } : {}}
 			onClick={onClose}
+			key="backdrop"
 		>
-			<ModalWindow image={image} />
+			<ModalWindow image={image} key={`modal ${props.image}`} />
 		</div>
 	)
 }

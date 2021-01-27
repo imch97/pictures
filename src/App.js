@@ -30,7 +30,11 @@ function App() {
 				</div>
 			</div>
 			{/* <ModalWindow image={activeImage} onClose={onCloseModal} /> */}
-			<BackDrop image={activeImage} onClose={onCloseModal}></BackDrop>
+			<BackDrop
+				image={activeImage}
+				onClose={onCloseModal}
+				key={`BACKDROP ${activeImage}`}
+			></BackDrop>
 		</div>
 	)
 }

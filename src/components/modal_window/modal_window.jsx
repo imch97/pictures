@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import Comment from '../comment/comment.jsx'
-// import classNames from 'classnames'
 import './modal_window.css'
-
-import BackDrop from '../backdrop/backdrop.jsx'
 
 const comments = [
 	{
@@ -33,20 +30,26 @@ const comments = [
 ]
 
 const ModalWindow = (props) => {
-	const { image, onClose } = props
+	const { image } = props
 
 	const [comm, setComm] = useState(comments)
 
 	return (
 		<>
 			<div className="modal_window">
-				<div className="modal_window_picture">
-					<img src={image} alt="" />
+				<div
+					className="modal_window_picture"
+					key={`modal_window_picture ${image}`}
+				>
+					<img src={image} alt="" key={`img ${image}`} />
 				</div>
-				<div className="modal_window_comments">
-					<div className="window_comments">
-						{comm.map((element) => (
-							<Comment comment={element} />
+				<div
+					className="modal_window_comments"
+					key={`modal_window_comments ${image}`}
+				>
+					<div className="window_comments" key={`window_comments ${image}`}>
+						{comm.map((element, index) => (
+							<Comment comment={element} key={`COMENT ${image} ${index}`} />
 						))}
 					</div>
 				</div>
