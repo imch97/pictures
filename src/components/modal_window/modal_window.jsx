@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Comment from '../comment/comment.jsx'
+import classNames from 'classnames'
 
 const comments = [
 	{
@@ -43,7 +44,10 @@ const ModalWindow = (props) => {
 
 	return (
 		<>
-			<div className="backdrop" style={visible ? { display: 'block' } : {}}>
+			<div
+				className={classNames({ backdrop, active: visible })}
+				style={visible ? { display: 'block' } : {}}
+			>
 				<div className="modal_window">
 					<div className="modal_window_picture">
 						<img src="" alt="" />
