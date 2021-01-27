@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Comment from '../comment/comment.jsx'
+import InputComment from '../input_comment/input_comment.jsx'
 import './modal_window.css'
 import classNames from 'classnames'
 
@@ -44,10 +45,12 @@ const ModalWindow = (props) => {
 				>
 					<img src={image} alt="" key={`img ${image}`} />
 				</div>
+
 				<div
 					className="modal_window_comments"
 					key={`modal_window_comments ${image}`}
 				>
+					<InputComment />
 					<div className="window_comments" key={`window_comments ${image}`}>
 						{comm.map((element, index) => (
 							<Comment comment={element} key={`COMENT ${image} ${index}`} />
