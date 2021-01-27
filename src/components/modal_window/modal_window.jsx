@@ -43,7 +43,7 @@ const ModalWindow = (props) => {
 
 	return (
 		<>
-			<div className="backdrop" style={visible ? { display: block } : {}}>
+			<div className="backdrop" style={visible ? { display: 'block' } : {}}>
 				<div className="modal_window">
 					<div className="modal_window_picture">
 						<img src="" alt="" />
@@ -60,4 +60,5 @@ const ModalWindow = (props) => {
 		</>
 	)
 }
-module.exports = ModalWindow
+
+export default ModalWindow

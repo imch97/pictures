@@ -1,16 +1,19 @@
 import './App.css'
+import ModalWIndow from './components/modal_window/modal_window.jsx'
+import Picture from './components/pictures/picture.jsx'
 
 const givePicture = () => {
 	let pic = []
 	for (let count = 1; count <= 30; count++) {
-		pic.push(
-			<img src={`/images/space3_${count}.jpg`} key={`img_${count}`} alt="" />
-		)
+		pic.push(`/images/space3_${count}.jpg`)
 	}
 	return pic
 }
 
 function App() {
+	function openPicture() {
+		ModalWIndow.open()
+	}
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -18,14 +21,9 @@ function App() {
 			</header>
 			<div className="container">
 				<div className="list_pictures">
-					{givePicture().map((el, index) => {
-						return (
-							<div className="list_pictures_item" key={`item_${index}`}>
-								{' '}
-								{el}{' '}
-							</div>
-						)
-					})}
+					{givePicture().map((el, index) => (
+						<Picture path={el} />
+					))}
 				</div>
 			</div>
 		</div>
