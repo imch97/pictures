@@ -2,6 +2,7 @@ import './App.css'
 import React, { useState } from 'react'
 import ModalWindow from './components/modal_window/modal_window.jsx'
 import Picture from './components/pictures/picture.jsx'
+import BackDrop from './components/backdrop/backdrop.jsx'
 
 const givePicture = () => {
 	let pic = []
@@ -12,7 +13,6 @@ const givePicture = () => {
 }
 
 function App() {
-	// const [modal, setModal] = useState()
 	const [activeImage, setActiveImage] = useState(null)
 	const onImageClick = (image) => setActiveImage(image)
 	const onCloseModal = () => setActiveImage(null)
@@ -29,7 +29,8 @@ function App() {
 					))}
 				</div>
 			</div>
-			<ModalWindow image={activeImage} onClose={onCloseModal} />
+			{/* <ModalWindow image={activeImage} onClose={onCloseModal} /> */}
+			<BackDrop image={activeImage} onClose={onCloseModal}></BackDrop>
 		</div>
 	)
 }

@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Comment from '../comment/comment.jsx'
-import classNames from 'classnames'
+// import classNames from 'classnames'
 import './modal_window.css'
+
+import BackDrop from '../backdrop/backdrop.jsx'
+
 const comments = [
 	{
 		id: 'com1',
@@ -32,26 +35,19 @@ const comments = [
 const ModalWindow = (props) => {
 	const { image, onClose } = props
 
-	const [tittle, setTittle] = useState('')
-	const [text, setText] = useState('')
 	const [comm, setComm] = useState(comments)
 
 	return (
 		<>
-			<div
-				className={classNames({ backdrop: true, active: props.image })}
-				style={props.image ? { display: 'block' } : {}}
-			>
-				<div className="modal_window">
-					<div className="modal_window_picture">
-						<img src="/images/space3_1.jpg" alt="" />
-					</div>
-					<div className="modal_window_comments">
-						<div className="window_comments">
-							{comments.map((element) => (
-								<Comment comment={element} />
-							))}
-						</div>
+			<div className="modal_window">
+				<div className="modal_window_picture">
+					<img src={image} alt="" />
+				</div>
+				<div className="modal_window_comments">
+					<div className="window_comments">
+						{comm.map((element) => (
+							<Comment comment={element} />
+						))}
 					</div>
 				</div>
 			</div>
