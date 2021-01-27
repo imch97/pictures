@@ -35,3 +35,17 @@
   height: auto;
   white-space: normal;
 }
+
+@media only screen and (max-width: 767px) {
+  .comment_info {
+    flex-direction: column;
+    text-align: left;
+  }
+  .comment_info_date {
+    font-size: smaller;
+  }
+
+  .comment_info_user {
+    font-size: 12px;
+  }
+}

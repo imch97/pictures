@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Comment from '../comment/comment.jsx'
 import './modal_window.css'
+import classNames from 'classnames'
 
 const comments = [
 	{
@@ -36,7 +37,7 @@ const ModalWindow = (props) => {
 
 	return (
 		<>
-			<div className="modal_window">
+			<div className={classNames({ modal_window: true, active: image })}>
 				<div
 					className="modal_window_picture"
 					key={`modal_window_picture ${image}`}

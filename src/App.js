@@ -29,7 +29,7 @@ function App() {
 					))}
 				</div>
 			</div>
-			{/* <ModalWindow image={activeImage} onClose={onCloseModal} /> */}
+			<ModalWindow image={activeImage} onClose={onCloseModal} />
 			<BackDrop
 				image={activeImage}
 				onClose={onCloseModal}

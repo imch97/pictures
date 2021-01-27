@@ -11,7 +11,7 @@ const BackDrop = (props) => {
 			onClick={onClose}
 			key="backdrop"
 		>
-			<ModalWindow image={image} key={`modal ${props.image}`} />
+			{/* <ModalWindow image={image} key={`modal ${props.image}`} /> */}
 		</div>
 	)
 }
