@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import ModalWindow from './components/ModalWindow/ModalWindow.jsx'
 import Picture from './components/Pictures/Picture.jsx'
 import BackDrop from './components/Backdrop/Backdrop.jsx'
+import LazyImage from './components/LazyImage/LazyImage.jsx'
 
 const givePicture = () => {
 	let pic = []
@@ -25,7 +26,8 @@ function App() {
 			<div className="container">
 				<div className="list_pictures">
 					{givePicture().map((el, index) => (
-						<Picture path={el} key={index} onClick={onImageClick} />
+						// <Picture path={el} key={index} onClick={onImageClick} />
+						<LazyImage src={el} key={index} onClick={onImageClick} />
 					))}
 				</div>
 			</div>

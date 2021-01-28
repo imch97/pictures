@@ -8,12 +8,7 @@ const Picture = (props) => {
 			key={`item_${props.path}`}
 			onClick={() => props.onClick(props.path)}
 		>
-			<img
-				src={props.path}
-				key={`img_${props.path}`}
-				alt="image space"
-				loading="lazy"
-			/>
+			<img src={props.path} key={`img_${props.path}`} alt="image space" />
 		</div>
 	)
 }
