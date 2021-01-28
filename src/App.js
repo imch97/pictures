@@ -1,7 +1,6 @@
 import './App.css'
 import React, { useState } from 'react'
 import ModalWindow from './components/ModalWindow/ModalWindow.jsx'
-import Picture from './components/Pictures/Picture.jsx'
 import BackDrop from './components/Backdrop/Backdrop.jsx'
 import LazyImage from './components/LazyImage/LazyImage.jsx'
 
@@ -11,7 +10,7 @@ const givePicture = () => {
 		pic.push(`/images/space3_${count}.jpg`)
 	}
 
-	for (let count = 1; count <= 66; count++) {
+	for (let count = 1; count <= 64; count++) {
 		pic.push(`/images/3dwall${count}.jpg`)
 	}
 

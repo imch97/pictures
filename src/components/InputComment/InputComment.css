@@ -16,9 +16,8 @@
   height: 30px;
   margin-left: 25px;
   text-align: center;
-  background-color: #7abdff;
+  /* background-color: #7abdff; */
   border-radius: 10%;
   border: solid 1px white;
   outline: none;
-  /* background-image: url(/images/button_send.svg); */
 }

@@ -41,3 +41,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media only screen and (max-width: 537px) {
+  .list_pictures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    padding: 10px 5px;
+  }
+}
