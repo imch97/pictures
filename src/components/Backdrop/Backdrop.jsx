@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import ModalWindow from '../ModalWindow/ModalWindow.jsx'
 
 const BackDrop = (props) => {
 	const { image, onClose } = props
@@ -10,9 +9,7 @@ const BackDrop = (props) => {
 			style={props.image ? { display: 'block' } : {}}
 			onClick={onClose}
 			key="backdrop"
-		>
-			{/* <ModalWindow image={image} key={`modal ${props.image}`} /> */}
-		</div>
+		></div>
 	)
 }
 

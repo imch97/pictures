@@ -1,5 +1,4 @@
 import React from 'react'
-import ModalWindow from '../ModalWindow/ModalWindow.jsx'
 
 const Picture = (props) => {
 	return (

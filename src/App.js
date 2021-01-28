@@ -10,6 +10,11 @@ const givePicture = () => {
 	for (let count = 1; count <= 30; count++) {
 		pic.push(`/images/space3_${count}.jpg`)
 	}
+
+	for (let count = 1; count <= 66; count++) {
+		pic.push(`/images/3dwall${count}.jpg`)
+	}
+
 	return pic
 }
 

@@ -47,7 +47,7 @@ const LazyImage = (props) => {
 		<div
 			className="list_pictures_item"
 			key={`item_${props.path}`}
-			onClick={() => props.onClick(props.path)}
+			onClick={() => props.onClick(props.src)}
 		>
 			<img ref={setImageRef} src={imageSrc} />
 		</div>
