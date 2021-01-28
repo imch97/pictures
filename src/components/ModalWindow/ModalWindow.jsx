@@ -35,6 +35,22 @@ const ModalWindow = (props) => {
 	const { image } = props
 	const [comm, setComm] = useState(comments)
 
+	const pressHandler = (event) => {
+		if (event.key === 'Enter') {
+			const newCom = {
+				id: 'com5',
+				user: 'user5',
+				text: `${event.target.value}`,
+				date: 'yyyy-mm-dd',
+			}
+			const updated = [newCom, ...comm]
+			setComm(updated)
+
+			event.target.value = ''
+			console.log(comm)
+		}
+	}
+
 	return (
 		<>
 			<div
@@ -53,8 +69,9 @@ const ModalWindow = (props) => {
 				<div
 					className="modal_window_comments"
 					key={`modal_window_comments ${image}`}
+					onKeyPress={pressHandler}
 				>
-					<InputComment />
+					<InputComment onKeyPress={pressHandler} />
 					<div className="window_comments" key={`window_comments ${image}`}>
 						{comm.map((element, index) => (
 							<Comment comment={element} key={`COMENT ${image} ${index}`} />
