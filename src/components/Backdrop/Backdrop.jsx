@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 const BackDrop = (props) => {
-	const { image, onClose } = props
+	const { onClose } = props
 	return (
 		<div
 			className={classNames({ backdrop: true, active: props.image })}
@@ -12,5 +12,4 @@ const BackDrop = (props) => {
 		></div>
 	)
 }
-//TODO WARNING
 export default BackDrop

@@ -7,6 +7,10 @@ const LazyImage = (props) => {
 	const [imageSrc, setImageSrc] = useState(placeHolder)
 	const [imageRef, setImageRef] = useState()
 
+	const onError = (event) => {
+		event.target.parentNode.classList.add('has-error')
+	}
+
 	useEffect(() => {
 		let observer
 		let didCancel = false
@@ -45,10 +49,10 @@ const LazyImage = (props) => {
 	return (
 		<div
 			className="list_pictures_item"
-			key={`item_${props.path}`}
+			key={`item_${props.src}`}
 			onClick={() => props.onClick(props.src)}
 		>
-			<img ref={setImageRef} src={imageSrc} />
+			<img ref={setImageRef} src={imageSrc} alt={imageSrc} onError={onError} />
 		</div>
 	)
 }

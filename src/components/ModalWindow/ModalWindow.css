@@ -67,4 +67,8 @@
     left: 7%;
     width: 75%;
   }
+
+  .modal_window_picture {
+    margin-bottom: 15px;
+  }
 }

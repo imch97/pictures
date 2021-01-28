@@ -30,8 +30,7 @@ function App() {
 			<div className="container">
 				<div className="list_pictures">
 					{givePicture().map((el, index) => (
-						// <Picture path={el} key={index} onClick={onImageClick} />
-						<LazyImage src={el} key={index} onClick={onImageClick} />
+						<LazyImage src={el} key={index} onClick={onImageClick} onError />
 					))}
 				</div>
 			</div>

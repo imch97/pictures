@@ -12,9 +12,10 @@
 }
 
 .input_comment > button {
-  width: 45px;
+  width: 30px;
   height: 30px;
-  margin-left: 25px;
+  margin-left: 15px;
+  padding: 0;
   text-align: center;
   /* background-color: #7abdff; */
   border-radius: 10%;
