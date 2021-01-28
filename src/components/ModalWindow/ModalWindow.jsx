@@ -33,12 +33,16 @@ const comments = [
 
 const ModalWindow = (props) => {
 	const { image } = props
-
 	const [comm, setComm] = useState(comments)
 
 	return (
 		<>
-			<div className={classNames({ modal_window: true, active: image })}>
+			<div
+				className={classNames({
+					modal_window: true,
+					active: image,
+				})}
+			>
 				<div
 					className="modal_window_picture"
 					key={`modal_window_picture ${image}`}

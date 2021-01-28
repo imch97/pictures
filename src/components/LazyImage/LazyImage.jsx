@@ -9,6 +9,7 @@ const LazyImage = (props) => {
 
 	const onError = (event) => {
 		event.target.parentNode.classList.add('has-error')
+		event.target.classList.add('has-error')
 	}
 
 	useEffect(() => {

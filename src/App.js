@@ -22,6 +22,14 @@ function App() {
 	const onImageClick = (image) => setActiveImage(image)
 	const onCloseModal = () => setActiveImage(null)
 
+	const checkLoadPicture = (e) => {}
+
+	const pressHandler = (event) => {
+		console.log(event)
+		if (event.key === 'Esc') {
+		}
+	}
+
 	return (
 		<div className="App">
 			<header className="App-header">
