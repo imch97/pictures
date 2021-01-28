@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Comment from '../comment/comment.jsx'
-import InputComment from '../input_comment/input_comment.jsx'
-import './modal_window.css'
+import Comment from '../Comment/Comment.jsx'
+import InputComment from '../InputComment/InputComment.jsx'
+import './ModalWindow.css'
 import classNames from 'classnames'
 
 const comments = [

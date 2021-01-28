@@ -1,5 +1,5 @@
 import React from 'react'
-import './input_comment.css'
+import './InputComment.css'
 
 const InputComment = (props) => {
 	return (

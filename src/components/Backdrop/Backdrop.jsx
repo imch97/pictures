@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import ModalWindow from '../modal_window/modal_window.jsx'
+import ModalWindow from '../ModalWindow/ModalWindow.jsx'
 
 const BackDrop = (props) => {
 	const { image, onClose } = props

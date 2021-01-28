@@ -1,8 +1,8 @@
 import './App.css'
 import React, { useState } from 'react'
-import ModalWindow from './components/modal_window/modal_window.jsx'
-import Picture from './components/pictures/picture.jsx'
-import BackDrop from './components/backdrop/backdrop.jsx'
+import ModalWindow from './components/ModalWindow/ModalWindow.jsx'
+import Picture from './components/Pictures/Picture.jsx'
+import BackDrop from './components/Backdrop/Backdrop.jsx'
 
 const givePicture = () => {
 	let pic = []
