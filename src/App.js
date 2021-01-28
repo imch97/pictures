@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ModalWindow from './components/ModalWindow/ModalWindow.jsx'
 import BackDrop from './components/Backdrop/Backdrop.jsx'
 import LazyImage from './components/LazyImage/LazyImage.jsx'
@@ -24,9 +24,13 @@ function App() {
 
 	const checkLoadPicture = (e) => {}
 
+	useEffect((event) => {
+		document.addEventListener('keydown', pressHandler)
+	}, [])
+
 	const pressHandler = (event) => {
-		console.log(event)
-		if (event.key === 'Esc') {
+		if (event.key === 'Escape') {
+			onCloseModal()
 		}
 	}
 

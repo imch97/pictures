@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Comment from '../Comment/Comment.jsx'
 import InputComment from '../InputComment/InputComment.jsx'
 import './ModalWindow.css'
