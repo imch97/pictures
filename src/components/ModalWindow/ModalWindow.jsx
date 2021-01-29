@@ -43,11 +43,10 @@ const ModalWindow = (props) => {
 				text: `${event.target.value}`,
 				date: 'yyyy-mm-dd',
 			}
-			const updated = [newCom, ...comm]
+			const updated = [...comm, newCom]
 			setComm(updated)
 
 			event.target.value = ''
-			console.log(comm)
 		}
 	}
 
@@ -71,7 +70,11 @@ const ModalWindow = (props) => {
 					key={`modal_window_comments ${image}`}
 					onKeyPress={pressHandler}
 				>
-					<InputComment onKeyPress={pressHandler} />
+					<InputComment
+						onKeyPress={pressHandler}
+						stateComments={comm}
+						setStateComments={setComm}
+					/>
 					<div className="window_comments" key={`window_comments ${image}`}>
 						{comm.map((element, index) => (
 							<Comment comment={element} key={`COMENT ${image} ${index}`} />
